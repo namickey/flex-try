@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+                       xmlns:s="library://ns.adobe.com/flex/spark"
+                       xmlns:mx="library://ns.adobe.com/flex/mx"
+                       width="400" height="300">
+
+    <fx:Style>
+        * { 
+            font-family: "Meiryo";
+        }
+    </fx:Style>
+
+    <fx:Script>
+        <![CDATA[
+            import mx.controls.Alert;
+
+            /**
+             * アラートを表示する処理
+             */
+            private function showMessage():void {
+                // アラートを表示
+                Alert.show('Hello World');
+            }
+        ]]>
+    </fx:Script>
+
+    <!-- ラベル -->
+    <s:Label left="10" top="10" text="Click the button."/>
+
+    <!-- ボタン -->
+    <s:Button left="10" top="40" label="Click Me" 
+        click="showMessage();" />
+
+</s:WindowedApplication>
